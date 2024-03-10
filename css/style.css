@@ -1,0 +1,887 @@
+/*
+---------------------------------------------------------------------
+FONT
+---------------------------------------------------------------------
+*/
+
+@font-face {
+    font-family: 'intro_inlineregular';
+    src: url('font/intro_inline-webfont.woff2') format('woff2'),
+         url('font/intro_inline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'intro_regular';
+    src: url('font/intro-webfont.woff2') format('woff2'),
+         url('font/intro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_novablack';
+    src: url('font/proximanova-black-webfont.woff2') format('woff2'),
+         url('font/proximanova-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('font/proximanova-bold-webfont.woff2') format('woff2'),
+         url('font/proximanova-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_novaextrabold';
+    src: url('font/proximanova-extrabold-webfont.woff2') format('woff2'),
+         url('font/proximanova-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_novalight';
+    src: url('font/proximanova-light-webfont.woff2') format('woff2'),
+         url('font/proximanova-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_novaregular';
+    src: url('font/proximanova-regular-webfont.woff2') format('woff2'),
+         url('font/proximanova-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_novasemibold';
+    src: url('font/proximanova-semibold-webfont.woff2') format('woff2'),
+         url('font/proximanova-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_condensedlight';
+    src: url('font/proximanovacond-light-webfont.woff2') format('woff2'),
+         url('font/proximanovacond-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_cn_rgregular';
+    src: url('font/proximanovacond-regular-webfont.woff2') format('woff2'),
+         url('font/proximanovacond-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_condensedSBd';
+    src: url('font/proximanovacond-semibold-webfont.woff2') format('woff2'),
+         url('font/proximanovacond-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_softregular';
+    src: url('font/proximanovasoft-regular-webfont.woff2') format('woff2'),
+         url('font/proximanovasoft-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+---------------------------------------------------------------------
+DEFAULT
+---------------------------------------------------------------------
+*/
+
+body {
+    color: #666;
+    font-family: 'proxima_novaregular';
+    font-size: 1em;
+}
+
+a,
+button {
+    color: #352a34;
+    cursor: pointer;
+    transition: all .20s linear;
+    -webkit-transition: all .20s linear;
+    -moz-transition: all .20s linear;
+    vertical-align: middle;
+}
+
+a:focus,
+a:hover {
+    color: #352a34;
+    text-decoration: none;
+}
+
+.phone{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.phone:hover{
+    color: #352a34;
+    text-decoration: none;
+}
+
+button, button:focus {
+    background: transparent;
+    border-color: none;
+    border-style: none;
+    border-width: none;
+    outline: none;
+}
+
+/*
+---------------------------------------------------------------------
+FORM
+---------------------------------------------------------------------
+*/
+
+label {
+    display: block;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="url"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="password"] {
+    background: #999;
+    border: none;
+    color: #777;
+    font: inherit;
+    padding: .2rem .5rem;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background: #ccc;
+    color: #555;
+    outline: none;
+}
+
+/*
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span,
+input[type="checkbox"] + label span,
+input[type="checkbox"]:checked + label span {
+    background: #DADADA;
+    border: none;
+    cursor: pointer;
+    float: left;
+    height: 17px;
+    margin-right: 8px;
+    vertical-align: middle;
+    width: 17px;
+}
+
+input[type="checkbox"]:checked + label span {
+    background: url(../img/admin/sprite.png) -152px 0 no-repeat #DADADA;
+}
+
+input[type="radio"]:checked + label span {
+    background: url(../img/admin/sprite.png) -169px 0 no-repeat #DADADA;
+}
+
+input[type="file"] {
+    background: none;
+    border: none;
+    padding: 0;
+    -webkit-appearance: none;
+    -webkit-rtl-ordering: left;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background: #888;
+    border: none;
+    color: #E9E9E9;
+    cursor: pointer;
+    line-height: normal;
+    margin-right: 10px;
+    padding: 10px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background: #999;
+}
+
+input[type="file"].border {
+    border-top: solid 1px #CCC;
+    padding-top: 10px;
+    margin-top: 10px;
+}*/
+
+.required:after {
+    content: "*";
+    color: #f48605;
+    margin-left: 5px;
+}
+
+/*
+---------------------------------------------------------------------
+UTILITÁRIOS
+---------------------------------------------------------------------
+*/
+
+ .gradient {
+    background: #666;
+    background: -moz-linear-gradient(left, #666 0%, #666 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #666), color-stop(100%, #666));
+    background: -webkit-linear-gradient(left, #666 0%, #666 100%);
+    background: -o-linear-gradient(left, #666 0%, #666 100%);
+    background: -ms-linear-gradient(left, #666 0%, #666 100%);
+    background: linear-gradient(to right, #666 0%, #666 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9e3ff', endColorstr='#d9feec', GradientType=1 );
+ }
+
+ .shadow {
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+}
+
+.btn-theme-primary,
+.btn-theme-secondary,
+.btn-theme-link,
+.btn-theme-warning {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'intro_regular';
+    font-size: .7;
+    padding: .5rem 1rem !important;
+    text-align: center;
+}
+
+.btn-theme-primary {
+    background-color: #352a34;
+    border: solid 1px #352a34;
+    color: #fff;
+}
+
+.btn-theme-primary:hover,
+.btn-theme-primary:focus,
+.btn-theme-primary:active  {
+    background-color: #ffffff;
+    border: solid 1px #352a34;
+    color: #352a34;
+}
+
+.btn-theme-secondary {
+    background-color: transparent;
+    border: solid 1px #5a90c7;
+    color: #5a90c7;
+}
+
+.btn-theme-secondary:hover,
+.btn-theme-secondary:focus,
+.btn-theme-secondary:active  {
+    background-color: #5a90c7;
+    color: #fff;
+}
+
+.btn-theme-link {
+    background-color: transparent;
+    border: solid 1px #352a34;
+    color: #352a34;
+}
+
+.btn-theme-link:hover,
+.btn-theme-link:focus,
+.btn-theme-link:active {
+    background-color: #352a34;
+    color: #fff;
+}
+
+.btn-theme-warning {
+    background: #fff;
+    border: solid 1px #fff;
+    color: #352a34;
+}
+
+.btn-theme-warning:hover,
+.btn-theme-warning:focus,
+.btn-theme-warning:active {
+    background: #fff;
+    border: solid 1px #fff;
+}
+
+/*
+---------------------------------------------------------------------
+ANIMAÇÃO
+---------------------------------------------------------------------
+*/
+
+[data-anime] {
+    color: inherit;
+    opacity: 0;
+    transition: .7s;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"] {
+    transform: translate3d(0, -70px, 0);
+}
+
+[data-anime="bottom"] {
+    transform: translate3d(0, 70px, 0);
+}
+
+[data-anime].animate {
+    color: inherit;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+
+/*
+---------------------------------------------------------------------
+HEADER
+---------------------------------------------------------------------
+*/
+
+header .logo {
+    left: 0;
+    padding-left: 15px; 
+    position: absolute;
+    top: 55px;
+    width: 180px;
+    z-index: 10;
+}
+
+header .logo img {
+    width: 100%
+}
+
+header .utilitarios {
+    font-family: 'intro_regular';
+    padding: 5px 0;
+}
+
+header .utilitarios i {
+    color: #ffffff;
+}
+
+header .utilitarios span {
+    font-size: .8em;
+}
+
+header .utilitarios span span {
+    font-size: .7em;
+}
+
+header .navbar-toggler i {
+    color: #352a34; 
+}
+
+header .navbar {
+    padding: 1rem 1rem;
+}
+
+header .collapse ul {
+    font-family: 'intro_regular';
+    justify-content: flex-end;
+    padding-top: 1.5rem;
+    text-transform: uppercase;
+}
+
+header .navbar li {
+    font-size: .8em;
+    text-align: center;
+}
+
+header .btn-theme-link {
+    font-size: 1em;
+    margin-top: 1rem;
+}
+
+/*
+---------------------------------------------------------------------
+FOOTER
+---------------------------------------------------------------------
+*/
+
+footer {
+    background: #f3f3f3;
+    font-size: .9em;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+footer .rodape {
+    background: #fff;
+    padding: 1rem 0;
+}
+
+footer .rodape .lc-info {
+    display: inline-block;
+    height: 28px;
+    opacity: .7;
+    width: 152px;
+}
+
+footer .rodape .lc-info:hover {
+    opacity: 1;
+}
+
+/*
+---------------------------------------------------------------------
+SECTION HOME
+---------------------------------------------------------------------
+*/
+
+.servicos h3 span,
+.quem-somos h3 span,
+.area-atuacao h3 span,
+.atendimento h3 span,
+.depoimentos h3 span {
+    font-family: 'proxima_nova_rgbold';
+}
+
+.img-depo{
+    width: 30%;
+}
+
+.cover {
+    background: #f6f6f6;
+    padding: 3rem 0;
+}
+
+.cover h1 {
+    color: #352a34;
+    font-family: 'proxima_nova_rgbold';
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.cover h2 {
+    font-family: 'intro_inlineregular';
+    font-size: .8em;
+    padding: 0 2rem;
+}
+
+.cover h3 {
+    font-family: 'intro_inlineregular';
+    font-size: .7em;
+    padding: 0 2rem;
+}
+
+.cover .btn-theme-primary,
+.cover .btn-theme-secondary {
+    display: inline-block;
+    width: 250px;
+}
+
+.servicos {
+    background: #cccccc;
+    padding: 2rem;
+}
+
+.servicos h3 {
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.servicos .list-produto h4 {
+    color: #5a90c7;
+    font-size: 1rem;
+}
+
+.services-description-1{
+    color: #352a34;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top:5px;
+}
+
+.services-description-2{
+    color: #352a34;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.quem-somos {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.quem-somos h3 {
+    color: #352a34;
+    font-size: 1.5em;
+}
+
+.quem-somos p {
+    font-size: .9em;
+}
+
+.area-atuacao {
+    background: #255594;;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.area-atuacao h3 {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.area-atuacao i {
+    color: #ffffff;
+    font-size: 1.7em;
+}
+
+.area-atuacao h5 {
+    color: #ffffff;
+    font-size: .8em;
+}
+
+.atendimento {
+    background: #352a34;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.depoimentos {
+    padding: 1rem;
+}
+
+.depoimentos h3 {
+    color: #ffffff;
+}
+
+.depoimentos img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%x;
+    border-radius: 50%;
+}
+
+.depoimentos p {
+    font-family: 'proxima_novalight';
+}
+
+.depoimentos p span {
+    font-family: 'proxima_nova_rgbold';
+}
+
+.depoimentos p span span{
+    font-family: 'intro_regular';
+}
+
+/*
+---------------------------------------------------------------------
+MEDIA QUERIES
+---------------------------------------------------------------------
+*/
+
+@media (min-width: 321px) {
+    
+}
+
+
+/*---------------------------------------------*/
+
+@media (min-width: 576px) {
+
+}
+
+/*---------------------------------------------*/
+
+
+@media (min-width: 768px) {
+
+    header .logo {
+        padding-left: 0;
+        top: 60px;
+        width: 258px;
+    }
+
+    header .navbar {
+        padding: 2.3rem 1rem;
+    }
+
+    .servicos h3,
+    .quem-somos h3,
+    .area-atuacao h3,
+    .atendimento h3,
+    .depoimentos h3 {
+        font-size: 1.8em;
+    }
+
+    .servicos .list-produto li {
+        float: left;
+        padding: .5rem;
+    }
+
+    .servicos img-1 {
+        float: right;
+    }
+
+    .servicos img-2 {
+        float: left;
+    }
+
+    .quem-somos {
+        text-align: left;
+    }
+
+}
+
+/*---------------------------------------------*/
+
+
+@media (min-width: 992px) {
+
+    header .collapse ul {
+        padding-top: 0;
+    }
+
+    header .btn-theme-link {
+        margin-top: 0;
+    }
+
+    .cover {
+        padding: 4rem 0;
+    }
+
+    .cover h1 {
+        font-size: 2.5em;
+    }
+
+    .cover h2 {
+        font-size: 1em;
+    }
+
+    .cover .btn-theme-primary,
+    .cover .btn-theme-secondary  {
+        width: 300px;
+    }
+
+    .cover .btn-theme-primary {
+        float: left;
+    }
+
+    .cover .btn-theme-secondary {
+        float: right;
+    }
+
+    .servicos {
+        padding: 3rem;
+    }
+
+    .area-atuacao h5 {
+        font-size: 1em;
+    }
+
+    .atendimento p {
+        padding: 0 10rem;
+    }
+
+    .quem-somos,
+    .area-atuacao,
+    .atendimento,
+    .depoimentos {
+        padding: 3rem 0;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    header .navbar li {
+        font-size: .9em;
+    }
+
+    .servicos h3,
+    .quem-somos h3,
+    .area-atuacao h3,
+    .atendimento h3,
+    .depoimentos h3 {
+        font-size: 2.2em;
+    }
+    
+}
+
+/*---------------------------------------------*/
+
+
+@media (min-width: 1400px) {
+
+    .btn-theme-primary,
+    .btn-theme-secondary,
+    .btn-theme-link {
+        padding: .6rem 1.3rem !important;
+    }
+
+    .cover {
+        padding: 6rem 0;
+    }
+
+    .cover h2 {
+        font-size: 1em;
+    }
+
+    .servicos {
+        padding: 4rem;
+    }
+
+    .servicos h3,
+    .quem-somos h3 {
+        font-size: 2.4em;
+    }
+
+    .quem-somos,
+    .area-atuacao,
+    .atendimento,
+    .depoimentos {
+        padding: 4rem 0;
+    }
+
+}
+
+/*---------------------------------------------*/
+.whats-fixo{
+    background: #1bd741;
+    transition: all ease-in-out .5s;
+    z-index: 99999999;
+    position: fixed;
+    padding: 1rem;
+    border-radius: 50%;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 22px;
+}
+
+@media (min-width: 1600px) {
+
+    .cover h1 {
+        font-size: 2.8em;
+    }
+
+}
+
+.cookies-container{
+    color: #222;
+    position: fixed;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    bottom: 2rem;
+    z-index: 1000;
+}
+.cookies-content{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+    background: white;
+    max-width: 860px;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cookies-content p{
+    font-size: .75rem;
+    text-align: center;
+    font-family: 'proxima_novalight';
+}
+.cookies-content label{
+    display: none;
+}
+.cookies-content button{
+    padding: .5rem 2rem;
+    border: solid 1px transparent;
+    text-transform: uppercase;
+    margin: 0 .5rem;
+    cursor: pointer;
+    font-size: .7rem;
+    font-family: titulo;
+    background: #3bbb7d;
+    border-radius: 7px;
+    transition: all ease-in-out .5s;
+    width: 130px;
+    margin: 0 auto;
+    color: #fff;
+    letter-spacing: 2px;
+    font-family: 'proxima_novalight';
+
+}
+.cookies-content a {
+    color: #352a34;
+    text-decoration: none;
+    font-weight: bold;
+}
+.politicas{
+    padding: 2rem 15px;
+}
+.politicas h2{
+    color: #ffffff;
+    font-size: 1.5em;
+}
+.politicas p{
+    font-size: .9em;
+}
+.politicas li{
+    font-size: .9em;
+    margin-bottom: 1.3rem;
+}
+.politicas ul{
+    margin-top: 1rem;
+}
+.item-politica{
+    margin-bottom: 2rem;
+}
+.politicas h3{
+    color: #ffffff;
+    font-size: 1.1em;
+}
